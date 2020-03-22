@@ -73,4 +73,24 @@ ul li a:hover, ul li a.active {
   background: pink;
 }
 
+.erro, .button-erro {
+  color: red;
+  font-weight: bold;
+}
+
+a.erro, a.button-erro {
+  display: block;
+}
+
+.button-erro {
+  padding: 20px;
+  width: 200px;
+}
+
+div::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /*# sourceMappingURL=style.css.map */

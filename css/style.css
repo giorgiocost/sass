@@ -15,6 +15,11 @@ p {
   max-width: 400px;
 }
 
+.modal {
+  box-shadow: 5px 5px 3px 0 purple, 10px 10px 0 0 orange, 15px 15px 4px 0 #046b85;
+  -moz-box-sizing: 5px 5px 3px 0 purple, 10px 10px 0 0 orange, 15px 15px 4px 0 #046b85;
+  -webkit-box-sizing: 5px 5px 3px 0 purple, 10px 10px 0 0 orange, 15px 15px 4px 0 #046b85;
+}
 .modal a {
   display: block;
   max-width: 120px;
@@ -26,6 +31,28 @@ p {
   text-decoration: none;
   text-transform: uppercase;
   font-family: monospace;
+}
+
+h2 {
+  font-size: 4em;
+  font-weight: bold;
+  font-family: Verdana;
+  line-height: 1;
+  color: purple;
+}
+h2::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 200px;
+  background: #84E;
+}
+@media (max-width: 600px) {
+  h2 {
+    font-size: 2em;
+    font-family: Verdana;
+    color: orange;
+  }
 }
 
 ul {

@@ -3,7 +3,7 @@
 
 // $preto: #999;
 // $laranja: rgb(235, 44, 123);
-// $fonte: Verdana;
+$font-v: Verdana;
 
 // div {
 //     background: $preto;
@@ -12,6 +12,13 @@
 //         font-family: $fonte;
 //     }
 // }
+
+// mobile
+@mixin mobile {
+	@media (max-width: 600px) {
+		@content;
+	}
+}
 
 $cor-principal: orange;
 $font: monospace;
@@ -36,8 +43,22 @@ p {
 	max-width: 400px;
 }
 
-.modal {
+@mixin box-shadow($shadow...) {
+	box-shadow: $shadow;
+	-moz-box-sizing: $shadow;
+	-webkit-box-sizing: $shadow;
+}
 
+$shadow1: 5px 5px 3px 0 purple;
+$shadow2: 10px 10px 0 0 orange;
+$shadow3: 15px 15px 4px 0 rgb(4, 107, 133);
+
+.modal {
+	@include box-shadow(
+		$shadow1,
+		$shadow2,
+		$shadow3,
+	);
 	a {
 		display: block;
 		max-width: 120px;
@@ -50,6 +71,41 @@ p {
 		text-transform: uppercase;
 		font-family: $font;
 	}
+}
+
+@mixin separador($cor, $largura: 100px) {
+	&::after {
+		content: '';
+		display: block;
+		height: 4px;
+		width: $largura;
+		background: $cor;
+	}
+}
+
+@mixin title-large {
+	font: {
+		size: 4em;
+		weight: bold;
+		family: $font-v;
+	}
+	line: {
+		height: 1;	
+	}
+	color: purple;
+}
+
+h2 {
+	@include title-large;
+	@include separador(#84E, 200px);
+	@include mobile {
+		font: {
+			size: 2em;
+			family: $font-v;
+		}
+		color: $cor-principal;
+	};
+
 }
 
 ul {
@@ -70,3 +126,4 @@ ul {
 		
 	}
 }
+

@@ -1,11 +1,46 @@
-$preto: #999;
-$laranja: rgb(235, 44, 123);
-$fonte: Verdana;
+// @import '_colors';
+// @import '_buttons';
 
-div {
-    background: $preto;
-    a {
-        color: $laranja;
-        font-family: $fonte;
-    }
+// $preto: #999;
+// $laranja: rgb(235, 44, 123);
+// $fonte: Verdana;
+
+// div {
+//     background: $preto;
+//     a {
+//         color: $laranja;
+//         font-family: $fonte;
+//     }
+// }
+
+$cor-principal: orange;
+$font: monospace;
+
+section {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+h1 {
+	color: $cor-principal;
+	font-family: $font;
+}
+
+p {
+	font-size: 1.2em;
+	line-height: 1.4;
+	max-width: 400px;
+}
+
+a {
+	display: block;
+	max-width: 120px;
+	padding: 10px;
+	border-radius: 4px;
+	text-align: center;
+	background: $cor-principal;
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: $font;
 }

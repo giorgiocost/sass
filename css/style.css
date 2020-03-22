@@ -1,9 +1,30 @@
-div {
-  background: #999;
+section {
+  max-width: 600px;
+  margin: 0 auto;
 }
-div a {
-  color: #eb2c7b;
-  font-family: Verdana;
+
+h1 {
+  color: orange;
+  font-family: monospace;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.4;
+  max-width: 400px;
+}
+
+a {
+  display: block;
+  max-width: 120px;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  background: orange;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: monospace;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -9,4 +9,4 @@
 `npm install -g sass`
 
 ### Compile Sass
-`sass --watch scss/*.scss:css/*.css`
+`sass --watch scss/style.scss:css/style.css`

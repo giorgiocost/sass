@@ -15,6 +15,7 @@
 
 $cor-principal: orange;
 $font: monospace;
+$size-text: 1.2em;
 
 section {
 	max-width: 600px;
@@ -27,20 +28,45 @@ h1 {
 }
 
 p {
-	font-size: 1.2em;
+	font: {
+		size: $size-text;
+		family: $font;
+	}
 	line-height: 1.4;
 	max-width: 400px;
 }
 
-a {
-	display: block;
-	max-width: 120px;
-	padding: 10px;
-	border-radius: 4px;
+.modal {
+
+	a {
+		display: block;
+		max-width: 120px;
+		padding: 10px;
+		border-radius: 4px;
+		text-align: center;
+		background: $cor-principal;
+		color: white;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-family: $font;
+	}
+}
+
+ul {
 	text-align: center;
-	background: $cor-principal;
-	color: white;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-family: $font;
+	li {
+		display: inline-block;
+		list-style: none;
+		a {
+			display: block;
+			padding: 20px;
+			text-decoration: none;
+			background: blue;
+			color: white;
+			&:hover, &.active {
+				background: pink;
+			}		
+		}
+		
+	}
 }

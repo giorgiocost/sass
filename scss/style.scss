@@ -152,4 +152,48 @@ div {
 	@extend %clearfix;
 }
 
+$soma: 3;
+//operadores
+h3 {
+	font: {
+		size: 1em + $soma;
+	}
+}
+
+
+@mixin borda($cor) {
+	@if $cor == 1 {
+		border: 2px solid red;
+	}@else if $cor == 2 {
+		border: 2px solid blue;
+	}@else{
+		border: 2px solid yellow;
+	}
+}
+
+$flex: flex;
+.row {
+	display: $flex;
+}
+
+.box-div {
+	width: 100px;
+	height: 100px;
+	flex: 1;
+}
+
+.div-1 {
+	@include borda(1);
+	@extend .box-div;
+}
+
+.div-2 {
+	@include borda(2);
+	@extend .box-div;
+}
+
+.div-3 {
+	@include borda('');
+	@extend .box-div;
+}
 

@@ -93,4 +93,30 @@ div::after {
   clear: both;
 }
 
+h3 {
+  font-size: 4em;
+}
+
+.row {
+  display: flex;
+}
+
+.box-div, .div-3, .div-2, .div-1 {
+  width: 100px;
+  height: 100px;
+  flex: 1;
+}
+
+.div-1 {
+  border: 2px solid red;
+}
+
+.div-2 {
+  border: 2px solid blue;
+}
+
+.div-3 {
+  border: 2px solid yellow;
+}
+
 /*# sourceMappingURL=style.css.map */

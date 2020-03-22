@@ -1,0 +1,11 @@
+$preto: #999;
+$laranja: rgb(235, 44, 123);
+$fonte: Verdana;
+
+div {
+    background: $preto;
+    a {
+        color: $laranja;
+        font-family: $fonte;
+    }
+}

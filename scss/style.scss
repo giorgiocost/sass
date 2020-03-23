@@ -3,7 +3,7 @@
 
 // $preto: #999;
 // $laranja: rgb(235, 44, 123);
-$font-v: Verdana;
+// $font-v: Verdana;
 
 // div {
 //     background: $preto;
@@ -14,186 +14,219 @@ $font-v: Verdana;
 // }
 
 // mobile
-@mixin mobile {
-	@media (max-width: 600px) {
-		@content;
-	}
-}
+// @mixin mobile {
+// 	@media (max-width: 600px) {
+// 		@content;
+// 	}
+// }
 
-$cor-principal: orange;
-$font: monospace;
-$size-text: 1.2em;
+// $cor-principal: orange;
+// $font: monospace;
+// $size-text: 1.2em;
 
-section {
-	max-width: 600px;
-	margin: 0 auto;
-}
+// section {
+// 	max-width: 600px;
+// 	margin: 0 auto;
+// }
 
-h1 {
-	color: $cor-principal;
-	font-family: $font;
-}
+// h1 {
+// 	color: $cor-principal;
+// 	font-family: $font;
+// }
 
-p {
-	font: {
-		size: $size-text;
-		family: $font;
-	}
-	line-height: 1.4;
-	max-width: 400px;
-}
+// p {
+// 	font: {
+// 		size: $size-text;
+// 		family: $font;
+// 	}
+// 	line-height: 1.4;
+// 	max-width: 400px;
+// }
 
-@mixin box-shadow($shadow...) {
-	box-shadow: $shadow;
-	-moz-box-sizing: $shadow;
-	-webkit-box-sizing: $shadow;
-}
+// @mixin box-shadow($shadow...) {
+// 	box-shadow: $shadow;
+// 	-moz-box-sizing: $shadow;
+// 	-webkit-box-sizing: $shadow;
+// }
 
-$shadow1: 5px 5px 3px 0 purple;
-$shadow2: 10px 10px 0 0 orange;
-$shadow3: 15px 15px 4px 0 rgb(4, 107, 133);
+// $shadow1: 5px 5px 3px 0 purple;
+// $shadow2: 10px 10px 0 0 orange;
+// $shadow3: 15px 15px 4px 0 rgb(4, 107, 133);
 
-.modal {
-	@include box-shadow(
-		$shadow1,
-		$shadow2,
-		$shadow3,
-	);
-	a {
-		display: block;
-		max-width: 120px;
-		padding: 10px;
-		border-radius: 4px;
-		text-align: center;
-		background: $cor-principal;
-		color: white;
-		text-decoration: none;
-		text-transform: uppercase;
-		font-family: $font;
-	}
-}
+// .modal {
+// 	@include box-shadow(
+// 		$shadow1,
+// 		$shadow2,
+// 		$shadow3,
+// 	);
+// 	a {
+// 		display: block;
+// 		max-width: 120px;
+// 		padding: 10px;
+// 		border-radius: 4px;
+// 		text-align: center;
+// 		background: $cor-principal;
+// 		color: white;
+// 		text-decoration: none;
+// 		text-transform: uppercase;
+// 		font-family: $font;
+// 	}
+// }
 
-@mixin separador($cor, $largura: 100px) {
-	&::after {
-		content: '';
-		display: block;
-		height: 4px;
-		width: $largura;
-		background: $cor;
-	}
-}
+// @mixin separador($cor, $largura: 100px) {
+// 	&::after {
+// 		content: '';
+// 		display: block;
+// 		height: 4px;
+// 		width: $largura;
+// 		background: $cor;
+// 	}
+// }
 
-@mixin title-large {
-	font: {
-		size: 4em;
-		weight: bold;
-		family: $font-v;
-	}
-	line: {
-		height: 1;	
-	}
-	color: purple;
-}
+// @mixin title-large {
+// 	font: {
+// 		size: 4em;
+// 		weight: bold;
+// 		family: $font-v;
+// 	}
+// 	line: {
+// 		height: 1;
+// 	}
+// 	color: purple;
+// }
 
-h2 {
-	@include title-large;
-	@include separador(#84E, 200px);
-	@include mobile {
-		font: {
-			size: 2em;
-			family: $font-v;
-		}
-		color: $cor-principal;
-	};
+// h2 {
+// 	@include title-large;
+// 	@include separador(#84E, 200px);
+// 	@include mobile {
+// 		font: {
+// 			size: 2em;
+// 			family: $font-v;
+// 		}
+// 		color: $cor-principal;
+// 	};
 
-}
+// }
 
-ul {
-	text-align: center;
-	li {
-		display: inline-block;
-		list-style: none;
-		a {
-			display: block;
-			padding: 20px;
-			text-decoration: none;
-			background: blue;
-			color: white;
-			&:hover, &.active {
-				background: pink;
-			}		
-		}
-		
-	}
-}
+// ul {
+// 	text-align: center;
+// 	li {
+// 		display: inline-block;
+// 		list-style: none;
+// 		a {
+// 			display: block;
+// 			padding: 20px;
+// 			text-decoration: none;
+// 			background: blue;
+// 			color: white;
+// 			&:hover, &.active {
+// 				background: pink;
+// 			}
+// 		}
 
-.erro {
-	color: red;
-	font-weight: bold;
-}
+// 	}
+// }
 
-a.erro {
-	display: block;
-}
+// .erro {
+// 	color: red;
+// 	font-weight: bold;
+// }
 
-.button-erro {
-	@extend .erro;
-	padding: 20px;
-	width: 200px;
-}
+// a.erro {
+// 	display: block;
+// }
 
-%clearfix::after {
-	content: '';
-	display: table;
-	clear: both;
-}
+// .button-erro {
+// 	@extend .erro;
+// 	padding: 20px;
+// 	width: 200px;
+// }
 
-div {
-	@extend %clearfix;
-}
+// %clearfix::after {
+// 	content: '';
+// 	display: table;
+// 	clear: both;
+// }
 
-$soma: 3;
-//operadores
-h3 {
-	font: {
-		size: 1em + $soma;
-	}
-}
+// div {
+// 	@extend %clearfix;
+// }
 
+// $soma: 3;
+// //operadores
+// h3 {
+// 	font: {
+// 		size: 1em + $soma;
+// 	}
+// }
 
-@mixin borda($cor) {
-	@if $cor == 1 {
-		border: 2px solid red;
-	}@else if $cor == 2 {
-		border: 2px solid blue;
-	}@else{
-		border: 2px solid yellow;
-	}
-}
+// @mixin borda($cor) {
+// 	@if $cor == 1 {
+// 		border: 2px solid red;
+// 	}@else if $cor == 2 {
+// 		border: 2px solid blue;
+// 	}@else{
+// 		border: 2px solid yellow;
+// 	}
+// }
 
-$flex: flex;
-.row {
-	display: $flex;
-}
+// $flex: flex;
+// .row {
+// 	display: $flex;
+// }
+
+// .box-div {
+// 	width: 100px;
+// 	height: 100px;
+// 	flex: 1;
+// }
+
+// .div-1 {
+// 	@include borda(1);
+// 	@extend .box-div;
+// }
+
+// .div-2 {
+// 	@include borda(2);
+// 	@extend .box-div;
+// }
+
+// .div-3 {
+// 	@include borda('');
+// 	@extend .box-div;
+// }
 
 .box-div {
-	width: 100px;
-	height: 100px;
-	flex: 1;
+  width: 100px;
+  height: 100px;
 }
 
-.div-1 {
-	@include borda(1);
-	@extend .box-div;
+@mixin type-device($device) {
+  @if ($device == tablet) {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+  @if ($device == mobile) {
+    @media (max-width: 400px) {
+      @content;
+    }
+  }
+  @if ($device == desktop) {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
 }
 
-.div-2 {
-	@include borda(2);
-	@extend .box-div;
+.content {
+	@include type-device(desktop) {
+		@import "_desktop.scss";
+	}
+	@include type-device(tablet) {
+		@import "_tablet.scss";
+	}
+	@include type-device(mobile) {
+		@import "_mobile.scss";
+	}
 }
-
-.div-3 {
-	@include borda('');
-	@extend .box-div;
-}
-

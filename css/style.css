@@ -1,122 +1,40 @@
-section {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-h1 {
-  color: orange;
-  font-family: monospace;
-}
-
-p {
-  font-size: 1.2em;
-  font-family: monospace;
-  line-height: 1.4;
-  max-width: 400px;
-}
-
-.modal {
-  box-shadow: 5px 5px 3px 0 purple, 10px 10px 0 0 orange, 15px 15px 4px 0 #046b85;
-  -moz-box-sizing: 5px 5px 3px 0 purple, 10px 10px 0 0 orange, 15px 15px 4px 0 #046b85;
-  -webkit-box-sizing: 5px 5px 3px 0 purple, 10px 10px 0 0 orange, 15px 15px 4px 0 #046b85;
-}
-.modal a {
-  display: block;
-  max-width: 120px;
-  padding: 10px;
-  border-radius: 4px;
-  text-align: center;
-  background: orange;
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: monospace;
-}
-
-h2 {
-  font-size: 4em;
-  font-weight: bold;
-  font-family: Verdana;
-  line-height: 1;
-  color: purple;
-}
-h2::after {
-  content: "";
-  display: block;
-  height: 4px;
-  width: 200px;
-  background: #84E;
-}
-@media (max-width: 600px) {
-  h2 {
-    font-size: 2em;
-    font-family: Verdana;
-    color: orange;
-  }
-}
-
-ul {
-  text-align: center;
-}
-ul li {
-  display: inline-block;
-  list-style: none;
-}
-ul li a {
-  display: block;
-  padding: 20px;
-  text-decoration: none;
-  background: blue;
-  color: white;
-}
-ul li a:hover, ul li a.active {
-  background: pink;
-}
-
-.erro, .button-erro {
-  color: red;
-  font-weight: bold;
-}
-
-a.erro, a.button-erro {
-  display: block;
-}
-
-.button-erro {
-  padding: 20px;
-  width: 200px;
-}
-
-div::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-h3 {
-  font-size: 4em;
-}
-
-.row {
-  display: flex;
-}
-
-.box-div, .div-3, .div-2, .div-1 {
+.box-div {
   width: 100px;
   height: 100px;
-  flex: 1;
 }
 
-.div-1 {
-  border: 2px solid red;
+@media (max-width: 900px) {
+  .content .div-1 {
+    background: blue;
+  }
+  .content .div-2 {
+    background: purple;
+  }
+  .content .div-3 {
+    background: palegreen;
+  }
 }
-
-.div-2 {
-  border: 2px solid blue;
+@media (max-width: 600px) {
+  .content .div-1 {
+    background: red;
+  }
+  .content .div-2 {
+    background: yellow;
+  }
+  .content .div-3 {
+    background: blue;
+  }
 }
-
-.div-3 {
-  border: 2px solid yellow;
+@media (max-width: 400px) {
+  .content .div-1 {
+    background: green;
+  }
+  .content .div-2 {
+    background: blue;
+  }
+  .content .div-3 {
+    background: purple;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -196,9 +196,38 @@
 // 	@extend .box-div;
 // }
 
+
+
 .box-div {
   width: 100px;
   height: 100px;
+}
+
+$color: green;
+.link1 {
+	color: $color;
+	font-weight: bold;
+	&:hover {
+		color: lighten($color ,50%);		
+	}
+}
+
+.link2 {
+	color: $color;
+	font-weight: bold;
+	&:hover {
+		color: darken($color ,10%);
+	}
+}
+
+$px: px;
+
+@function em($em,$px){
+	@return $em+$px;
+}
+
+h3{
+	font-size: em(10,$px);
 }
 
 @mixin type-device($device) {
@@ -228,5 +257,34 @@
 	}
 	@include type-device(mobile) {
 		@import "_mobile.scss";
+	}
+}
+
+
+@for $var from 1 through 2 {
+	.item-#{$var} {
+		width: $var * 100px;
+	}
+}
+
+@for $i from 3 to 5 {
+	.item-#{$i} {
+		width: $i * 100px;
+	}
+}
+
+$num: 1;
+@while $num <= 6 {
+	.size-font-#{$num} {
+		font-size: $num * 2+px;
+	}
+	$num: $num+1;
+}
+
+
+$redes: facebook twitter instagram;
+@each $list in $redes {
+	.rede-#{$list} {
+		background: blue;
 	}
 }

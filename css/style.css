@@ -3,6 +3,26 @@
   height: 100px;
 }
 
+.link1 {
+  color: green;
+  font-weight: bold;
+}
+.link1:hover {
+  color: #80ff80;
+}
+
+.link2 {
+  color: green;
+  font-weight: bold;
+}
+.link2:hover {
+  color: #004d00;
+}
+
+h3 {
+  font-size: 10px;
+}
+
 @media (max-width: 900px) {
   .content .div-1 {
     background: blue;
@@ -35,6 +55,58 @@
   .content .div-3 {
     background: purple;
   }
+}
+
+.item-1 {
+  width: 100px;
+}
+
+.item-2 {
+  width: 200px;
+}
+
+.item-3 {
+  width: 300px;
+}
+
+.item-4 {
+  width: 400px;
+}
+
+.size-font-1 {
+  font-size: 2px;
+}
+
+.size-font-2 {
+  font-size: 4px;
+}
+
+.size-font-3 {
+  font-size: 6px;
+}
+
+.size-font-4 {
+  font-size: 8px;
+}
+
+.size-font-5 {
+  font-size: 10px;
+}
+
+.size-font-6 {
+  font-size: 12px;
+}
+
+.rede-facebook {
+  background: blue;
+}
+
+.rede-twitter {
+  background: blue;
+}
+
+.rede-instagram {
+  background: blue;
 }
 
 /*# sourceMappingURL=style.css.map */
